@@ -1,0 +1,98 @@
+/* Phân tích 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Tổng quan đến chi tiết
+*/
+
+/* 
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {}
+
+#header {
+    height: 46px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    position: fixed;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+}
+
+
+
+#nav .subnav li:hover a,
+#nav>li:hover>a {
+    background-color: #ccc;
+    color: #000;
+}
+
+#nav li {
+    display: block;
+    position: relative;
+}
+
+#nav>li {
+    display: inline-block;
+}
+
+#nav .subnav {
+    /* display: flex;
+    flex-direction: column; */
+    background-color: #fff;
+    display: none;
+    position: absolute;
+}
+
+#nav .subnav a {
+    color: #000;
+    display: block;
+}
+
+.search {
+    height: 46px;
+    width: 62px;
+    right: 0;
+    top: 0;
+    /* background-color: #000; */
+    background-image: ;
+    position: absolute;
+}
+
+.search:hover{
+    background-color: #f44336;
+    color: #fff;
+}
+
+
+
+
+#slider {}
+
+#container {}
+
+#footer {}
