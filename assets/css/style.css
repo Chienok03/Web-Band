@@ -20,9 +20,14 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.clear{
+    clear: both;
+}
+
 #main {}
 
 #header {
+
     height: 46px;
     top: 0;
     left: 0;
@@ -43,7 +48,9 @@ html {
     display: inline-block;
 }
 
-
+#nav {
+    display: inline-block;
+}
 
 #nav .subnav li:hover a,
 #nav>li:hover>a {
@@ -74,25 +81,89 @@ html {
 }
 
 .search {
-    height: 46px;
-    width: 62px;
-    right: 0;
-    top: 0;
-    /* background-color: #000; */
-    background-image: ;
-    position: absolute;
+    float: right;
+    padding: 0 24px;
 }
 
-.search:hover{
+.search-icon {
+    color: #fff;
+}
+
+.search .ti-search {
+    line-height: 46px;
+}
+
+.search:hover {
     background-color: #f44336;
     color: #fff;
 }
 
+#slider {
+    padding-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/chicago.jpg') top center / cover no-repeat;
+}
 
+#slider .text-content {
+    padding: 32px 16px;
+    position: relative;
+    /* /* width: 100%;* */
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+#slider .text-heading {
+    color: #fff;
+}
 
-#slider {}
+#slider .text-description {
+    color: #fff;
+    margin-top: 25px;
+}
 
-#container {}
+#content {
+    
+}
 
+#content .content-section{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+#content .section-heading{
+    letter-spacing: 4px;
+    text-align: center;
+}
+#content .section-sub-heading{
+    opacity: 0.6;
+    font-style: italic;
+    padding: 25px 0 15px 0;
+    text-align: center;
+}
+#content .about-text{
+    text-align: justify;
+}
+
+#content .member-list{
+    margin-top: 48px;
+}
+
+#content .member-item{
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+#content .member-name{
+    font-size: 15px;
+    text-align: center;
+}
+
+#content .member-img {
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
 #footer {}
