@@ -31,7 +31,6 @@ html {
 #main {}
 
 #header {
-
     height: 46px;
     top: 0;
     left: 0;
@@ -106,7 +105,7 @@ html {
 #slider {
     padding-top: 46px;
     padding-top: 50%;
-    background: url('/assets/img/chicago.jpg') top center / cover no-repeat;
+    background: url("/assets/img/chicago.jpg") top center / cover no-repeat;
 }
 
 #slider .text-content {
@@ -176,7 +175,6 @@ html {
 
 #content .tour-section {
     background-color: #000;
-
 }
 
 .tickets-list {
@@ -199,7 +197,7 @@ html {
 }
 
 .tickets-list .quantity {
-    color:#fff;
+    color: #fff;
     float: right;
     width: 24px;
     height: 24px;
@@ -211,15 +209,13 @@ html {
 }
 
 .tour-section .places-list {
-   margin: 32px -8px 0;
+    margin: 32px -8px 0;
 }
 
 .tour-section .place-item {
     float: left;
     width: 33.3333%;
     padding: 0 8px;
-    
-    
 }
 
 .tour-section .place-img {
@@ -227,7 +223,7 @@ html {
     display: block;
 }
 
-.tour-section .place-img:hover{
+.tour-section .place-img:hover {
     opacity: 0.6;
 }
 
@@ -259,9 +255,101 @@ html {
     display: inline;
 }
 
-.tour-section .place-buy-btn:hover{
+.tour-section .place-buy-btn:hover {
     background-color: #ccc;
     color: #000;
-} 
+}
 
 #footer {}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-container {
+    background: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+}
+
+.modal-header {
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-heading-icon {
+    margin-right: 16px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+}
+
+.modal-close:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+#buy-ticket {
+    background: #009688;
+    border: none;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 18px;
+}
+
+#buy-ticket:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+}
+
+.modal-footer a {
+    color: #2196f3;
+}
