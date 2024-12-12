@@ -58,15 +58,15 @@
                 <div class="member-list">
                     <div class="member-item">
                         <p class="member-name">Name</p>
-                        <img src="/assets/img/bandmember.jpg" alt="Ảnh thành viên" class="member-img">
+                        <img src="/Web-Band/assets/img/bandmember.jpg" alt="Ảnh thành viên" class="member-img">
                     </div>
                     <div class="member-item">
                         <p class="member-name">Name</p>
-                        <img src="/assets/img/bandmember.jpg" alt="Ảnh thành viên" class="member-img">
+                        <img src="/Web-Band/assets/img/bandmember.jpg" alt="Ảnh thành viên" class="member-img">
                     </div>
                     <div class="member-item">
                         <p class="member-name">Name</p>
-                        <img src="/assets/img/bandmember.jpg" alt="Ảnh thành viên" class="member-img">
+                        <img src="/Web-Band/assets/img/bandmember.jpg" alt="Ảnh thành viên" class="member-img">
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -84,35 +84,35 @@
 
                     <div class="places-list">
                         <div class="place-item">
-                            <img src="/assets/img/newyork.jpg" alt="" class="place-img">
+                            <img src="/Web-Band/assets/img/newyork.jpg" alt="" class="place-img">
                             <div class="place-content">
                                 <h4 class="place-name">New York</h4>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <a href="" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
 
                         <div class="place-item">
-                            <img src="/assets/img/paris.jpg" alt="" class="place-img">
+                            <img src="/Web-Band/assets/img/paris.jpg" alt="" class="place-img">
                             <div class="place-content">
                                 <h4 class="place-name">Paris</h4>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <a href="" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
 
                         <div class="place-item">
-                            <img src="/assets/img/sanfran.jpg" alt="" class="place-img">
+                            <img src="/Web-Band/assets/img/sanfran.jpg" alt="" class="place-img">
                             <div class="place-content">
                                 <h4 class="place-name">San Francisco</h4>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <a href="" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
                     </div>
@@ -128,9 +128,9 @@
 
         </div>
 
-        <div class="modal">
-            <div class="modal-container">
-                <div class="modal-close">
+        <div class="modal js-modal">
+            <div class="modal-container js-modal-container">
+                <div class="modal-close js-modal-close">
                     <i class="ti-close"></i>
                 </div>
                 <header class="modal-header">
@@ -165,6 +165,33 @@
 
         </div>
     </div>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-tickets');
+        const modal = document.querySelector('.js-modal');
+        const modalContainer = document.querySelector('.js-modal-container');
+        const modalClose = document.querySelector('.js-modal-close');
+
+        //Hàm hiển thị form mua vé(thêm class open vào modal)
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+
+        //Hàm ẩn form mua vé(gỡ bỏ class open của modal)
+        function closeModal(){
+            modal.classList.remove('open')
+        }
+
+        for(const buytBtn of buyBtns) {
+            buytBtn.addEventListener('click', showBuyTickets)
+            
+        }
+        modalClose.addEventListener('click', closeModal)
+        modal.addEventListener('click', closeModal)
+        modalContainer.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+    </script>
 </body>
 
 </html>

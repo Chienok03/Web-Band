@@ -105,7 +105,7 @@ html {
 #slider {
     padding-top: 46px;
     padding-top: 50%;
-    background: url("/assets/img/chicago.jpg") top center / cover no-repeat;
+    background: url("/Web-Band/assets/img/chicago.jpg") top center / cover no-repeat;
 }
 
 #slider .text-content {
@@ -270,12 +270,13 @@ html {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.4);
-    align-items: center;
-    justify-content: center;
+    
 }
 
 .modal.open {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-container {
@@ -284,6 +285,8 @@ html {
     max-width: calc(100% - 32px);
     min-height: 200px;
     position: relative;
+    /* transform: translateY(-100px); */
+    animation: modalFaceIn ease 0.3s;
 }
 
 .modal-header {
@@ -352,4 +355,15 @@ html {
 
 .modal-footer a {
     color: #2196f3;
+}
+
+@keyframes modalFaceIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
